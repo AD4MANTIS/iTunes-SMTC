@@ -406,21 +406,23 @@ namespace iTunes.SMTC
 
                 var wasAlive = false;
 
+                if (_currentTrack != null)
+                {
+                    Marshal.FinalReleaseComObject(_currentTrack);
+                    GC.Collect();
+                }
+                _currentTrack = null;
+
                 if (_iTunesApp != null)
                 {
                     Debug.WriteLine("Releasing iTunes COM object...");
                     wasAlive = true;
 
                     RemoveEvents();
-                    Marshal.ReleaseComObject(_iTunesApp);
+                    Marshal.FinalReleaseComObject(_iTunesApp);
+                    GC.Collect();
                 }
                 _iTunesApp = null;
-
-                if (_currentTrack != null)
-                {
-                    Marshal.ReleaseComObject(_currentTrack);
-                }
-                _currentTrack = null;
 
                 _isPlaying = false;
 
