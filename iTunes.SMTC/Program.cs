@@ -20,7 +20,7 @@ namespace iTunes.SMTC
             if (createdNew)
             {
                 ApplicationConfiguration.Initialize();
-                AppCenter.Start(Keys.AppCenterKey.GetSecret(), typeof(Crashes));
+                //AppCenter.Start(Keys.AppCenterKey.GetSecret(), typeof(Crashes));
                 Application.Run(new SettingsUi());
             }
         }

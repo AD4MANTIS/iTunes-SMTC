@@ -10,8 +10,8 @@
   IgnorableNamespaces="uap rescap uap3 uap5 mp">
 
 	<Identity
-	  Name="49586DaveAntoine.MediaControllerforiTunes"
-	  Publisher="CN=FC137F73-0421-4275-8C89-E761F4D1BC3D"
+	  Name="AD4MANTIS.MediaControllerforiTunes"
+	  Publisher="CN=AD4MANTIS"
 	  Version="1.0.17.0" />
 
 	<Properties>
@@ -34,7 +34,7 @@
 		  Executable="$targetnametoken$.exe"
 		  EntryPoint="$targetentrypoint$">
 			<uap:VisualElements
-			  DisplayName="Media Controller for iTunes"
+			  DisplayName="Media Controller for iTunes (Dev)"
 			  Description="Integrates iTunes with Windows 10/11 system media controls"
 			  BackgroundColor="transparent"
 			  Square150x150Logo="Assets\Square150x150Logo.png"
